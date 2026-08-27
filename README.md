@@ -97,6 +97,13 @@ node scripts/smoke.mjs # DRY_RUN stdio smoke test (no live server needed)
 node scripts/dump_tools.mjs  # export the tool catalog
 ```
 
+## Testing
+
+```bash
+npm test              # run the unit test suite
+npm run coverage       # run tests with coverage; fails if any src/*.js file is under 80% branch coverage
+```
+
 ## Layout
 
-See `../framework/` for the architecture documentation (API facts in `01-sdnext-api/`, design decisions in `02-mcp-design/`). Source under `src/`: `config.js`, `client.js`, `image.js`, `registry.js`, `index.js`, and `tools/` (one file per domain).
+See `../framework/` for the architecture documentation (API facts in `01-sdnext-api/`, design decisions in `02-mcp-design/`). Source under `src/`: `config.js`, `client.js`, `image.js`, `registry.js`, `app.js` (builds the server and its transports), `index.js` (tiny CLI bootstrap), and `tools/` (one file per domain).
